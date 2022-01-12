@@ -11,15 +11,15 @@ export default function DanhSachXucXac(props) {
             <div className='bg-white' style={{ width: 300, height: 300, borderRadius: 150, paddingLeft:10 }}>
                 <div className='row' style={{width: 100}}>
                     <div className='col-12' style={{ marginTop:0, marginLeft:65 }}>
-                        <XucXac xucXac = {mangXucXac[0]}/>
+                        <XucXac key={Date.now()} xucXac = {mangXucXac[0]}/>
                     </div>
                 </div>
                 <div className='row'>
                     <div className='col-5'>
-                        <XucXac xucXac = {mangXucXac[1]}/>
+                        <XucXac key={Date.now()} xucXac = {mangXucXac[1]}/>
                     </div>
                     <div className='col-7'>
-                        <XucXac xucXac = {mangXucXac[2]}/>
+                        <XucXac key={Date.now()} xucXac = {mangXucXac[2]}/>
                     </div>
                 </div>
             </div>

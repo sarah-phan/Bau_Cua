@@ -10,7 +10,8 @@ export default function DanhSachCuoc(props) {
         return danhSachCuoc.map((quanCuoc, index) => {
             return (
                 <div className='col-4' key={index}>
-                    <QuanCuoc 
+                    <QuanCuoc
+                    key = {Date.now()} 
                     quanCuoc = {quanCuoc}
                     />
                 </div>

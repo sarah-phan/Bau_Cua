@@ -24,8 +24,10 @@ export const GameBauCuaReducer =  (state = initialState, action) => {
         const index = danhSachCuocUpdate.findIndex(qc => qc.ma === action.quanCuoc.ma)
         if(index !== -1){
             if(action.tangGiam){
-                danhSachCuocUpdate[index].diemCuoc += 100;
-                state.tongDiem -= 100;
+                if (state.tongDiem > 0){
+                    danhSachCuocUpdate[index].diemCuoc += 100;
+                    state.tongDiem -= 100;
+                }
             }
             else{
                 if(danhSachCuocUpdate[index].diemCuoc > 0){
